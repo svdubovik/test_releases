@@ -8,5 +8,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: bcoe/conventional-release-labels@v1
-        with:
-          type_labels: '{"breaking": "breaking", "feat": "enhancement", "fix": "bug"}'
