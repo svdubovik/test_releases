@@ -1,4 +1,5 @@
 name: "Update Changelog"
+
 on:
   release:
     types: [released]
@@ -6,15 +7,21 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
         with:
           ref: ${{ github.event.release.target_commitish }}
-      - uses: stefanzweifel/changelog-updater-action@v1
+
+      - name: Update Changelog
+        uses: stefanzweifel/changelog-updater-action@v1
         with:
           latest-version: ${{ github.event.release.tag_name }}
           release-notes: ${{ github.event.release.body }}
-      - uses: stefanzweifel/git-auto-commit-action@v4
+
+      - name: Commit updated CHANGELOG
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: ${{ github.event.release.target_commitish }}
           commit_message: Update CHANGELOG
