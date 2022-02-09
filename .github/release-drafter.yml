@@ -1,13 +1,13 @@
 name-template: "v$RESOLVED_VERSION"
 tag-template: "v$RESOLVED_VERSION"
 
+change-template: "- $TITLE (#$NUMBER) @$AUTHOR"
 template: |
   # What's Changed
-  $CHANGES
-  **Full Changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
 
-change-template: "- $TITLE (#$NUMBER) @$AUTHOR"
-change-title-escapes: '\<*_&@' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+  $CHANGES
+
+  **Full Changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
 
 categories:
   - title: "Breaking Changes 🛠"

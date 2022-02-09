@@ -9,14 +9,4 @@ jobs:
     steps:
       - uses: bcoe/conventional-release-labels@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           type_labels: '{"breaking": "breaking", "feat": "enhancement", "fix": "bug"}'
-
-  check_labels:
-    name: Check labels
-    runs-on: ubuntu-latest
-    steps:
-      - uses: docker://agilepathway/pull-request-label-checker:latest
-        with:
-          one_of: breaking,enhancement,bug
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
