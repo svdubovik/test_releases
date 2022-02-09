@@ -1,23 +1,23 @@
 name-template: "v$RESOLVED_VERSION"
 tag-template: "v$RESOLVED_VERSION"
 
-change-template: "- $TITLE (#$NUMBER) @$AUTHOR"
+change-template: "- $TITLE @$AUTHOR ([#$NUMBER](https://github.com/user/repo/pull/$NUMBER))'"
 template: |
-  # What's Changed
+  ## What's Changed
 
   $CHANGES
 
   **Full Changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
 
 categories:
-  - title: "Breaking Changes 🛠"
+  - title: "Breaking Changes"
     labels:
       - "breaking"
-  - title: "New Features 🚀"
+  - title: "New Features"
     labels:
       - "feature"
       - "enhancement"
-  - title: "Bug Fixes 🐛"
+  - title: "Bug Fixes"
     labels:
       - "fix"
       - "bugfix"

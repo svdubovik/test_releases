@@ -20,10 +20,10 @@
 #           commit_message: Update CHANGELOG
 #           file_pattern: CHANGELOG.md
 
-name: Generate changelog
+name: "[AUTOMATE] Generate changelog"
 on:
   release:
-    types: [created, edited]
+    types: [released]
 
 jobs:
   generate-changelog:
@@ -34,8 +34,6 @@ jobs:
           fetch-depth: 0
       - uses: BobAnkh/auto-generate-changelog@master
         with:
-          REPO_NAME: "svdubovik/test_releases"
           ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          PATH: "CHANGELOG.md"
-          COMMIT_MESSAGE: "docs(CHANGELOG): update release notes"
-          TYPE: "feat:Feature,fix:Bug Fixes,docs:Documentation,refactor:Refactor,perf:Performance Improvements"
+          COMMIT_MESSAGE: "docs: update CHANGELOG"
+          TYPE: "breaking:Breaking Changes,feat:New Features,fix:Bug Fixes,docs:Documentation,refactor:Refactor,ci:CICD"
