@@ -4,6 +4,7 @@ on:
     branches:
       - main
     paths:
+      - "**.txt"
       - "modules/**"
       - "terragrunt/**"
       - "!**.md"
