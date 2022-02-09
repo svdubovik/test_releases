@@ -13,4 +13,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
           publish: true
-          disable-autolabeler: true
