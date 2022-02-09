@@ -1,26 +1,15 @@
 name: Pull Request
-
 on:
   pull_request:
 
 jobs:
-  title:
+  label:
     runs-on: ubuntu-latest
     steps:
-      - uses: neofinancial/ticket-check-action@v1
+      - uses: bcoe/conventional-release-labels@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          ticketLink: "https://copmany.atlassian.net/browse/OPS-%ticketNumber%"
-          ticketPrefix: "OPS-"
-          titleRegex: '^OPS-(?<ticketNumber>\d+)'
-          branchRegex: ^(ops)(-?)(?<ticketNumber>\d{3,})
-          bodyRegex: 'OPS-(?<ticketNumber>\d+)'
-          bodyURLRegex: 'http(s?):\/\/(:copmany.atlassian.net)(\/browse)\/(OPS\-)(?<ticketNumber>\d+)'
-
-  check_labels:
-    runs-on: ubuntu-latest
-    steps:
+          type_labels: '{"feat": "enhancement", "fix": "bug", "breaking": "breaking"}'
       - uses: docker://agilepathway/pull-request-label-checker:latest
         with:
-          one_of: new-feature,breaking-change,bug-fix,docs-update,minor-update,enhancement
+          one_of: enhancement,fix,breaking
           repo_token: ${{ secrets.GITHUB_TOKEN }}
