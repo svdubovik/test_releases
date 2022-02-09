@@ -1,5 +1,24 @@
 # CHANGELOG
 
+## [v0.4.5](https://github.com/svdubovik/test_releases/releases/tag/v0.4.5) - 2022-02-09 23:09:20
+
+## What's Changed
+
+* No changes
+
+**Full Changelog**: https://github.com/svdubovik/test_releases/compare/v0.4.4...v0.4.5
+
+
+### Documentation
+
+- general:
+  - update CHANGELOG ([57dfd89](https://github.com/svdubovik/test_releases/commit/57dfd892b098d4ed793caee02d25067e6bdc62ed))
+
+### CICD
+
+- general:
+  - enable autolabeler for Drafter ([179d221](https://github.com/svdubovik/test_releases/commit/179d2217345d829198e1f5924883137617d36cc1))
+
 ## [v0.4.4](https://github.com/svdubovik/test_releases/releases/tag/v0.4.4) - 2022-02-09 22:59:16
 
 ## What's Changed
