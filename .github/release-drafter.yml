@@ -1,38 +1,40 @@
 name-template: "v$RESOLVED_VERSION"
 tag-template: "v$RESOLVED_VERSION"
+
+template: |
+  # What's Changed
+  $CHANGES
+  **Full Changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
+
+change-template: "- $TITLE (#$NUMBER) @$AUTHOR"
+change-title-escapes: '\<*_&@' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+
 categories:
-  - title: Features
+  - title: "Breaking Changes 🛠"
+    labels:
+      - "breaking"
+  - title: "New Features 🚀"
     labels:
       - "feature"
       - "enhancement"
-  - title: Bug Fixes
+  - title: "Bug Fixes 🐛"
     labels:
       - "fix"
       - "bugfix"
       - "bug"
-  - title: Maintenance
-    label: "chore"
-  - title: Miscellaneous #Everything except ABAP
-    label: "misc"
-change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
-change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+
 version-resolver:
   major:
     labels:
-      - "breaking-change"
+      - "breaking"
   minor:
     labels:
       - "enhancement"
+      - "feature"
   patch:
     labels:
       - "bug"
-  default: patch
+      - "fix"
 
-include-labels:
-  - "breaking-change"
-  - "enhancement"
-  - "bug"
-
-template: |
-  ## Changes
-  $CHANGES
+exclude-labels:
+  - "skip-changelog"
