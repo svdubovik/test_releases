@@ -13,7 +13,7 @@ jobs:
           ticketLink: "https://copmany.atlassian.net/browse/OPS-%ticketNumber%"
           ticketPrefix: "OPS-"
           titleRegex: '^OPS-(?<ticketNumber>\d+)'
-
+          branchRegex: ^(ops)(-?)(?<ticketNumber>\d{3,})
           bodyRegex: 'OPS-(?<ticketNumber>\d+)'
           bodyURLRegex: 'http(s?):\/\/(:copmany.atlassian.net)(\/browse)\/(OPS\-)(?<ticketNumber>\d+)'
 
