@@ -1,7 +1,6 @@
 name: "[AUTOMATE] Labling"
 on:
   pull_request:
-    types: [opened, edited]
 
 jobs:
   add_label:
