@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## [v0.4.3](https://github.com/svdubovik/test_releases/releases/tag/v0.4.3) - 2022-02-09 22:29:48
+
+# What's Changed
+
+## Bug Fixes 🐛
+
+- OPS-3: New feature (#8) @svdubovik
+
+**Full Changelog**: https://github.com/svdubovik/test_releases/compare/v0.4.2...v0.4.3
+
+
 ## [v0.4.2](https://github.com/svdubovik/test_releases/releases/tag/v0.4.2) - 2022-02-09 22:25:47
 
 # What's Changed
