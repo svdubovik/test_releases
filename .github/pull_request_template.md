@@ -1,5 +1,3 @@
-### Related issue link
-
 JIRA URL: <JIRA_URL>
 
 ### Background and solution
@@ -7,9 +5,6 @@ JIRA URL: <JIRA_URL>
 <!--
 Describe the problem and the scenario.
 -->
-
-
-
 
 
 ⚠️ Please check all items below before review. ⚠️
