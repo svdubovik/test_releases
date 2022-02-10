@@ -14,4 +14,4 @@ jobs:
         with:
           ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
           COMMIT_MESSAGE: "docs: update CHANGELOG"
-          TYPE: ""
+          TYPE: "ci:ci"

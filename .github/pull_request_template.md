@@ -9,11 +9,11 @@ Describe the problem and the scenario.
 -->
 
 
-### Self Check before Merge
+
+
 
 ⚠️ Please check all items below before review. ⚠️
 
-- [ ] Doc is updated/provided or not needed
 - [ ] PR Title will be used as a ChangeLog (Make sure it is proper)
 - [ ] PR has necessary label
 
