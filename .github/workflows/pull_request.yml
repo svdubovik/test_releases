@@ -8,3 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: bcoe/conventional-release-labels@v1
+        with:
+          type_labels: '{"breaking": "breaking", "feat": "enhancement", "fix": "bug"}'
+          ignored_types: '["chore", "ci", "docs"]'
+          ignore_label: "skip-changelog"
+      - uses: docker://agilepathway/pull-request-label-checker:latest
+        with:
+          one_of: breaking,enhancement,bug,skip-changelog
+          repo_token: ${{ secrets.GITHUB_TOKEN }}

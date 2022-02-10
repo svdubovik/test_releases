@@ -1,28 +1,27 @@
-## Related issue link
+### Related issue link
 
 JIRA URL: <JIRA_URL>
 
-## Background and solution
+### Background and solution
 
 <!--
 Describe the problem and the scenario.
 -->
 
 
-## Self Check before Merge
+### Self Check before Merge
 
 ⚠️ Please check all items below before review. ⚠️
 
 - [ ] Doc is updated/provided or not needed
-- [ ] Validation and linters are OK
 - [ ] PR Title will be used as a ChangeLog (Make sure it is proper)
 - [ ] PR has necessary label
 
 
 These Labels will be mapped to the releases in below format
 
-| Label    | Version Change |
-| -------- | -------------- |
-| fix      | Patch          |
-| feature  | Minor          |
-| breaking | Major          |
+| Label       | Version Change |
+| ----------- | -------------- |
+| breaking    | Major          |
+| enhancement | Minor          |
+| bug         | Patch          |

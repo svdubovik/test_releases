@@ -1,7 +1,7 @@
 name-template: "v$RESOLVED_VERSION"
 tag-template: "v$RESOLVED_VERSION"
 
-change-template: "- $TITLE @$AUTHOR ([#$NUMBER](https://github.com/user/repo/pull/$NUMBER))'"
+change-template: "- $TITLE @$AUTHOR ([#$NUMBER](https://github.com/user/repo/pull/$NUMBER))"
 category-template: "### $TITLE"
 template: |
   ## What's Changed
@@ -11,17 +11,14 @@ template: |
   **Full Changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
 
 categories:
-  - title: "Breaking Changes"
+  - title: "Breaking Changes 🎉"
     labels:
       - "breaking"
-  - title: "New Features"
+  - title: "New Features 🚀"
     labels:
-      - "feature"
       - "enhancement"
-  - title: "Bug Fixes"
+  - title: "Bug Fixes 🛠"
     labels:
-      - "fix"
-      - "bugfix"
       - "bug"
 
 version-resolver:
@@ -31,11 +28,10 @@ version-resolver:
   minor:
     labels:
       - "enhancement"
-      - "feature"
   patch:
     labels:
       - "bug"
-      - "fix"
+  default: patch
 
 exclude-labels:
   - "skip-changelog"
